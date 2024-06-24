@@ -13,6 +13,11 @@
 		867472382C27444E001889F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 867472362C27444E001889F1 /* Main.storyboard */; };
 		8674723A2C274450001889F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867472392C274450001889F1 /* Assets.xcassets */; };
 		8674723D2C274450001889F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8674723B2C274450001889F1 /* LaunchScreen.storyboard */; };
+		867472452C27472F001889F1 /* Alex Ubago - A gritos de esperanza.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 867472442C27472F001889F1 /* Alex Ubago - A gritos de esperanza.mp3 */; };
+		867472482C27475F001889F1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867472472C27475F001889F1 /* AVFoundation.framework */; };
+		8674724A2C27476A001889F1 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867472492C27476A001889F1 /* AVKit.framework */; };
+		8674724C2C275669001889F1 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8674724B2C275669001889F1 /* VideoPlayer.swift */; };
+		8674724F2C275E25001889F1 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 8674724E2C275E25001889F1 /* YouTubeiOSPlayerHelper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,10 @@
 		867472392C274450001889F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8674723C2C274450001889F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8674723E2C274450001889F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		867472442C27472F001889F1 /* Alex Ubago - A gritos de esperanza.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Alex Ubago - A gritos de esperanza.mp3"; sourceTree = "<group>"; };
+		867472472C27475F001889F1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		867472492C27476A001889F1 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		8674724B2C275669001889F1 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8674724A2C27476A001889F1 /* AVKit.framework in Frameworks */,
+				867472482C27475F001889F1 /* AVFoundation.framework in Frameworks */,
+				8674724F2C275E25001889F1 /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +54,7 @@
 			children = (
 				8674722F2C27444E001889F1 /* Multimedia */,
 				8674722E2C27444E001889F1 /* Products */,
+				867472462C27475E001889F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +69,7 @@
 		8674722F2C27444E001889F1 /* Multimedia */ = {
 			isa = PBXGroup;
 			children = (
+				867472442C27472F001889F1 /* Alex Ubago - A gritos de esperanza.mp3 */,
 				867472302C27444E001889F1 /* AppDelegate.swift */,
 				867472322C27444E001889F1 /* SceneDelegate.swift */,
 				867472342C27444E001889F1 /* ViewController.swift */,
@@ -63,8 +77,18 @@
 				867472392C274450001889F1 /* Assets.xcassets */,
 				8674723B2C274450001889F1 /* LaunchScreen.storyboard */,
 				8674723E2C274450001889F1 /* Info.plist */,
+				8674724B2C275669001889F1 /* VideoPlayer.swift */,
 			);
 			path = Multimedia;
+			sourceTree = "<group>";
+		};
+		867472462C27475E001889F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				867472492C27476A001889F1 /* AVKit.framework */,
+				867472472C27475F001889F1 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +107,9 @@
 			dependencies = (
 			);
 			name = Multimedia;
+			packageProductDependencies = (
+				8674724E2C275E25001889F1 /* YouTubeiOSPlayerHelper */,
+			);
 			productName = Multimedia;
 			productReference = 8674722D2C27444E001889F1 /* Multimedia.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +138,9 @@
 				Base,
 			);
 			mainGroup = 867472242C27444E001889F1;
+			packageReferences = (
+				8674724D2C275E25001889F1 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
+			);
 			productRefGroup = 8674722E2C27444E001889F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				867472452C27472F001889F1 /* Alex Ubago - A gritos de esperanza.mp3 in Resources */,
 				8674723D2C274450001889F1 /* LaunchScreen.storyboard in Resources */,
 				8674723A2C274450001889F1 /* Assets.xcassets in Resources */,
 				867472382C27444E001889F1 /* Main.storyboard in Resources */,
@@ -138,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8674724C2C275669001889F1 /* VideoPlayer.swift in Sources */,
 				867472352C27444E001889F1 /* ViewController.swift in Sources */,
 				867472312C27444E001889F1 /* AppDelegate.swift in Sources */,
 				867472332C27444E001889F1 /* SceneDelegate.swift in Sources */,
@@ -358,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8674724D2C275E25001889F1 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8674724E2C275E25001889F1 /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8674724D2C275E25001889F1 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 867472252C27444E001889F1 /* Project object */;
 }
